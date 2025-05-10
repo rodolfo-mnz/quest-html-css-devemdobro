@@ -1,0 +1,365 @@
+@media (max-width: 768px) {
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .newsletter {
+        width: 370px !important;
+        margin-right: 0px;
+    }
+
+    /* Verificar classe antes */
+    .social-icons {
+        display: flex;
+        margin: 0px;
+    }
+    .footer-centralDeAtendimento {
+        max-width: 270px;
+        margin-left: 0px;
+    }
+    .footer-institucional {
+        max-width: 220px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    /* Ajustes do Header e SearchInput */
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .searchInput {
+        width: 180px;
+        margin-left: 0;
+    }
+
+    /* Ajustes do Menu Hamburguer */
+    .nav-links {
+        width: 100%;
+        right: -100%;
+        padding-top: 60px;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px 20px;
+    }
+
+    /* Ajustes da Seção Principal */
+    .section-container {
+        padding: 1rem;
+    }
+
+    .section-item {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 12px;
+    }
+
+    .section-container-item {
+        width: 50px;
+        height: 50px;
+    }
+
+    .section-text {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .title-section {
+        font-size: 1.1rem;
+    }
+
+    .text-section {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .searchInput {
+        width: 120px;
+        margin-left: 0 !important;
+    }
+
+    .section-container-item {
+        width: 36px;
+        height: 36px;
+    }
+
+    .title-section {
+        font-size: 1rem;
+    }
+
+    .text-section {
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos do Header e Menu */
+.header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #00252e;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos do Menu Hamburguer */
+.inputCheckbox {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.hamburguer {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Estilos da Lista de Navegação */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 80px 20px 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-links li {
+    margin: 15px 0;
+    list-style: none;
+}
+
+
+.nav-links a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Animação do Menu Hamburguer */
+.inputCheckbox:checked ~ .menu .hamburguer:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.inputCheckbox:checked ~ .menu .hamburguer:nth-child(2) {
+    opacity: 0;
+}
+
+.inputCheckbox:checked ~ .menu .hamburguer:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* Mostrar menu quando checkbox estiver marcado */
+.inputCheckbox:checked ~ .nav-links {
+    right: 0;
+    background-color: #00252e;
+}
+
+.searchInput {
+    width: 300px;
+    height: 35px;
+    padding: 0 15px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    font-size: 16px;
+    margin-left: -80px;
+}
+
+.section-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.section-container-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Gradientes para cada círculo */
+.section-item:nth-child(1) .section-container-item {
+    background: linear-gradient(45deg, #ff6b00, #ff9e00);
+}
+
+.section-item:nth-child(2) .section-container-item {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+.section-item:nth-child(3) .section-container-item {
+    background: linear-gradient(45deg, #ff00cc, #333399);
+}
+
+.section-item:nth-child(4) .section-container-item {
+    background: linear-gradient(45deg, #00ff87, #60efff);
+}
+
+.section-item:nth-child(5) .section-container-item {
+    background: linear-gradient(45deg, #ff9a8b, #ff6a88);
+}
+
+.section-item:nth-child(6) .section-container-item {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+
+.section-item:nth-child(7) .section-container-item {
+    background: linear-gradient(45deg, #f6d365, #fda085);
+}
+
+.section-item:nth-child(8) .section-container-item {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+
+.section-item:nth-child(9) .section-container-item {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+
+.section-item:nth-child(10) .section-container-item {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.section-item:nth-child(11) .section-container-item {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.section-item:nth-child(12) .section-container-item {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+.section-item:nth-child(13) .section-container-item {
+    background: linear-gradient(45deg, #fa709a, #fee140);
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-section {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.text-section {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Estilos do Body e HTML */
+html, body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    position: relative;
+}
+
+/* Estilos do Main */
+main {
+    flex: 1;
+    padding-bottom: 60px; /* Espaço para o footer */
+}
+
+/* Estilos do Footer */
+footer {
+    width: 100%;
+    background-color: #00252e;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.attribution {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.attribution a {
+    color: #ff6b00;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+/* Overlay para fechar o menu ao clicar fora */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.inputCheckbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
